@@ -29,7 +29,30 @@ function App() {
     setTodos(newTodos)
   }
 
-  const allTodos = todos.map(todo => <TodoItem key={todo.id} todo={todo} handleChange={handleChange} deleteTodo={deleteTodo} />)
+  function editTodo(id, newText) {
+    const newTodos = todos.map(todo => {
+      if(todo.id === id && newText.length > 0) {
+        return {
+          ...todo,
+          text: newText
+        }
+      } else {
+        return todo
+      }
+    })
+    
+    setTodos(newTodos)
+  }
+
+  const allTodos = todos.map(todo => (
+    <TodoItem 
+      key={todo.id} 
+      todo={todo} 
+      handleChange={handleChange} 
+      deleteTodo={deleteTodo}
+      editTodo={editTodo}
+    />
+  ))
 
   return (
     <div className="todo-list">
