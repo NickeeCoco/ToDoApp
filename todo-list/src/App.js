@@ -22,7 +22,14 @@ function App() {
     setTodos(newTodos)
   }
 
-  const allTodos = todos.map(todo => <TodoItem key={todo.id} todo={todo} handleChange={handleChange} />)
+  function deleteTodo(todo) {
+    const newTodos = [...todos]
+    const todoIndex = newTodos.indexOf(todo)
+    newTodos.splice(todoIndex, 1)
+    setTodos(newTodos)
+  }
+
+  const allTodos = todos.map(todo => <TodoItem key={todo.id} todo={todo} handleChange={handleChange} deleteTodo={deleteTodo} />)
 
   return (
     <div className="todo-list">
