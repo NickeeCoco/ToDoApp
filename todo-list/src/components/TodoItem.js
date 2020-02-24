@@ -5,7 +5,8 @@ function TodoItem(props) {
   const [isEdit, setIsEdit] = useState(false)
 
   function renameTodo() {
-    editTodo(todo.id, document.getElementById("newTodoText").value)
+    let newText = document.getElementById("newTodoText").value
+    editTodo(todo.id, newText)
     setIsEdit(prev => !prev)
   }
 

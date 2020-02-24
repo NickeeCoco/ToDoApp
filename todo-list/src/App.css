@@ -18,3 +18,21 @@
   text-decoration: line-through;
   font-style: italic;
 }
+
+/*************** Add todo form ***************/
+.add-todo-form {
+  margin-bottom: 2em;
+}
+
+.add-todo-label {
+  margin-right: .5em;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.add-todo-input, .add-todo-button {
+  padding: .3em;
+  font-size: 1.2rem
+}
+
