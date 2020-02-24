@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+/* Font awesome library initialization */
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faPlus, faEdit, faSave, faTrash} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faPlus, faEdit, faSave, faTrash)
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

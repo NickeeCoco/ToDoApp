@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
-import AddTodoItem from "./components/AddTodoItem"
+import AddTodoForm from "./components/AddTodoForm"
 import TodoItem from "./components/TodoItem"
 import Todos from "./utils/todosData"
 
@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="todo-list">
-      <AddTodoItem addTodo={addTodo} />
+      <AddTodoForm addTodo={addTodo} />
       {allTodos}
     </div>
   );

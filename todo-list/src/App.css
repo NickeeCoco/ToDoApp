@@ -1,22 +1,8 @@
 .todo-list {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   margin-top: 5em;
-}
-
-.todo-item {
-  font-size: 1.5rem;
-  margin: .5em 0;
-}
-
-.todo-label {
-  margin-left: .8em;
-}
-
-.completed {
-  color: #7c7c7c;
-  text-decoration: line-through;
-  font-style: italic;
 }
 
 /*************** Add todo form ***************/
@@ -27,12 +13,42 @@
 .add-todo-label {
   margin-right: .5em;
   margin-bottom: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
-.add-todo-input, .add-todo-button {
+.add-todo-input {
   padding: .3em;
   font-size: 1.2rem
 }
 
+/*************** Todo item ***************/
+.todo-item {
+  font-size: 1.5rem;
+  margin: .5em auto;
+}
+
+.todo-item-checkbox {
+  -ms-transform: scale(1.4); /* IE */
+  -moz-transform: scale(1.4); /* FF */
+  -webkit-transform: scale(1.4); /* Safari and Chrome */
+  -o-transform: scale(1.4); /* Opera */
+  transform: scale(1.4);
+  /* padding: 5px; */
+}
+
+.todo-label, .todo-item-input {
+  margin-left: .8em;
+}
+
+.completed {
+  color: #7c7c7c;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+/*************** Flex ***************/
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
