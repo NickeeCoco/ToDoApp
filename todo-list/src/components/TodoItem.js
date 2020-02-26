@@ -29,9 +29,10 @@ function TodoItem(props) {
               type="text" 
               placeholder={todo.text} 
               id="newTodoText" 
+              maxlength="35"
             /> :
             <label 
-              className={`todo-label ${todo.completed && "completed"}`}
+              className={`todo-item-label ${todo.completed && "completed"}`}
               htmlFor={`todo-${todo.id}`}
             >
               {todo.text}
@@ -40,10 +41,16 @@ function TodoItem(props) {
       </div>
 
       <div className="todo-item-buttons">
-        <button onClick={() => isEdit ? renameTodo() : setIsEdit(prev => !prev)}>
+        <button 
+          className="todo-item-button edit-button btn" 
+          onClick={() => isEdit ? renameTodo() : setIsEdit(prev => !prev)}
+        >
           {isEdit ? <FontAwesomeIcon icon="save" /> : <FontAwesomeIcon icon="edit" />}
         </button>
-        <button onClick={() => deleteTodo(todo)}>
+        <button 
+          className="todo-item-button delete-button btn" 
+          onClick={() => deleteTodo(todo)}
+        >
           <FontAwesomeIcon icon="trash" />
         </button>
       </div>

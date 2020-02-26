@@ -18,7 +18,7 @@ function AddTodoItem(props) {
   }
 
   return(
-    <form className="add-todo-form">
+    <form className="add-todo-form flex-container">
       <label className="add-todo-label" htmlFor="new-todo">Add a todo</label>
       <input 
         className="add-todo-input" 
@@ -26,10 +26,11 @@ function AddTodoItem(props) {
         type="text" 
         id="new-todo" 
         value={newTodoText} 
-        onChange={handleChange} 
+        onChange={handleChange}
+        maxlength="35"
       />
       <button 
-        className="add-todo-button" 
+        className="add-todo-button btn" 
         onClick={handleClick} 
         disabled={newTodoText.length > 0 ? false : true}
       >
