@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 import AddTodoForm from "./components/AddTodoForm"
@@ -6,10 +6,8 @@ import TodoItem from "./components/TodoItem"
 import Todos from "./utils/todosData"
 
 function App() {
-
   const [todos, setTodos] = useState(Todos)
   const [id, setId] = useState(todos.length)
-  // const isEmpty = todos.length > 0 ? false : true
 
   function handleChange(id) {
     const newTodos = todos.map(todo => {
@@ -59,14 +57,6 @@ function App() {
 
     setTodos(prevState => [...prevState, newTodo])
   }
-
-  useEffect(() => {
-    
-  })
-
-  // useEffect(() => {
-  //   setTodos([{id: 0, text: "Add a todo", completed: false}])
-  // }, [isEmpty])
 
   const allTodos = todos.map(todo => (
     <TodoItem 
